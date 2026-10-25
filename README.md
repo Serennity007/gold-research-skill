@@ -4,6 +4,18 @@
 
 # Gold Research
 
+<!-- futures-desk-v3 -->
+## Research desk v2.0
+
+New: an offline **English/Chinese** desk with historical vintages, explicit sessions, comparable basis/curves, seasonal evidence, Decimal fee/margin capacity and gap stress. [Data contract](docs/desk-data-contract.md) · [Research playbook](references/research-playbook.md) · [Capacity assumptions](docs/desk-risk-model.md).
+
+```bash
+python scripts/run_desk.py run --config examples/desk-demo/gold/config.json --out output --lang en
+```
+
+Both report languages are emitted on every run. The original command and frozen Chinese demonstrations below remain available. Download the self-contained Skill ZIP from [releases](https://github.com/Serennity007/gold-research-skill/releases). Basic commands need only Python 3.10+.
+
+
 Compare gold price structure, the gold/silver ratio, the US dollar and real yields using explicitly dated inputs.
 
 [Futures research workbench](https://github.com/Serennity007/taotao-futures-research) · [Agent Skill](SKILL.md) · [Language coverage](docs/LANGUAGES.md) · MIT
@@ -20,7 +32,7 @@ python scripts/run_research.py --config examples/workbench.json --out output
 
 Open the printed `REPORT.html` path. You can also inspect the committed [Markdown report](examples/workbench/REPORT.md) or download the [HTML report](examples/workbench/REPORT.html).
 
-The supplied CSV files are synthetic; dates label the exercise. They test calculations and workflow, not a historical trading record. Research reports and reference material currently retain Chinese text; this source release provides English and Chinese entry guides, not an application language switch.
+The supplied CSV files are synthetic; dates label the exercise. They test calculations and workflow, not a historical trading record. Legacy research reports and reference material retain Chinese text; this source release provides English and Chinese entry guides, not an application language switch.
 
 ## Check the numbers
 

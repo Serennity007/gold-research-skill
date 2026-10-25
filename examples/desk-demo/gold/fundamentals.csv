@@ -1,0 +1,7 @@
+metric,value,unit,season_key,observed_at,published_at,available_at
+real_yield_pct,100,declared_demo_units,crop_or_season_week_39_demo,2021-09-26T10:00:00+08:00,2021-09-26T12:00:00+08:00,2021-09-26T12:05:00+08:00
+real_yield_pct,120,declared_demo_units,crop_or_season_week_39_demo,2022-09-26T10:00:00+08:00,2022-09-26T12:00:00+08:00,2022-09-26T12:05:00+08:00
+real_yield_pct,80,declared_demo_units,crop_or_season_week_39_demo,2023-09-26T10:00:00+08:00,2023-09-26T12:00:00+08:00,2023-09-26T12:05:00+08:00
+real_yield_pct,110,declared_demo_units,crop_or_season_week_39_demo,2024-09-26T10:00:00+08:00,2024-09-26T12:00:00+08:00,2024-09-26T12:05:00+08:00
+real_yield_pct,105,declared_demo_units,crop_or_season_week_39_demo,2025-09-26T10:00:00+08:00,2025-09-26T12:00:00+08:00,2025-09-26T12:05:00+08:00
+real_yield_pct,999,declared_demo_units,crop_or_season_week_39_demo,2025-09-26T10:00:00+08:00,2025-09-29T12:00:00+08:00,2025-09-29T12:05:00+08:00

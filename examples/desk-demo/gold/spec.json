@@ -1,0 +1,32 @@
+[
+  {
+    "version": "SYNTHETIC-1",
+    "source": "synthetic://not-an-exchange-rule",
+    "contract": "AU_DEMO_202512",
+    "currency": "CNY",
+    "price_unit": "CNY/gram",
+    "multiplier": "10",
+    "tick": "1",
+    "margin_rate": "0.10",
+    "last_trade_at": "2025-12-15T15:00:00+08:00",
+    "effective_at": "2025-09-01T00:00:00+08:00",
+    "expires_at": "2025-12-01T00:00:00+08:00",
+    "observed_at": "2025-08-01T10:00:00+08:00",
+    "published_at": "2025-08-01T10:00:00+08:00",
+    "available_at": "2025-08-01T10:05:00+08:00",
+    "fees": {
+      "open": {
+        "per_contract": "2",
+        "ad_valorem": "0.0001"
+      },
+      "close": {
+        "per_contract": "2",
+        "ad_valorem": "0.0001"
+      },
+      "close_today": {
+        "per_contract": "5",
+        "ad_valorem": "0.0001"
+      }
+    }
+  }
+]

@@ -103,8 +103,12 @@ def calculate(config, raw):
             'scope':'Offline descriptive research; imported source claims are not authenticated; no execution or profit estimate.'}
 
 
+from legacy_bundle_integrity import seal, verify_snapshot
+
+
 def load(config_path):
     config_path=Path(config_path).resolve()
+    assurance=verify_snapshot(config_path) if config_path.name=="config.snapshot.json" else "original_input_configuration"
     config_raw=config_path.read_bytes()
     config=json.loads(config_raw.decode('utf-8-sig'))
     if config.get('skill')!=SKILL or set(config.get('files',{}))!=ROLES[SKILL]:
@@ -127,6 +131,7 @@ def load(config_path):
         provenance[role]={'source':source,'file_name':path.name,'sha256':hashlib.sha256(content).hexdigest(),'bytes':len(content)}
     result=calculate(config,raw)
     result['inputs']=provenance
+    result['input_assurance']=assurance
     result['config_sha256']=hashlib.sha256(config_raw).hexdigest()
     return config,raw,result
 
@@ -180,7 +185,7 @@ def run(config_path,output):
     for name,body in artifacts.items():
         with (directory/name).open('x',encoding='utf-8',newline='\n') as handle:
             handle.write(body)
-    (directory/'COMPLETE.json').write_text(json.dumps({'status':'complete','files':list(artifacts),'input_roles':sorted(raw)})+'\n',encoding='utf-8',newline='\n')
+    seal(directory)
     return directory
 
 

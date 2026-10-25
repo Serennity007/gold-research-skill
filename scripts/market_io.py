@@ -9,6 +9,8 @@ from pathlib import Path
 
 
 def timestamp(value):
+    if not isinstance(value, str) or not value.strip():
+        raise ValueError("timestamps must be nonempty ISO-8601 strings")
     parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
     if parsed.tzinfo is None or parsed.utcoffset() is None:
         raise ValueError("timestamps require an explicit timezone")
@@ -16,6 +18,8 @@ def timestamp(value):
 
 
 def number(value, positive=False):
+    if isinstance(value, bool):
+        raise ValueError("boolean is not a numeric observation")
     result = float(value)
     if not math.isfinite(result) or (positive and result <= 0):
         raise ValueError("invalid finite price/value")
@@ -26,9 +30,13 @@ def records(raw, required):
     reader = csv.DictReader(io.StringIO(raw.decode("utf-8-sig")))
     if not set(required).issubset(reader.fieldnames or []):
         raise ValueError("missing columns: " + ",".join(required))
+    if len(reader.fieldnames) != len(set(reader.fieldnames)):
+        raise ValueError("duplicate CSV column names")
     result = list(reader)
     if not result:
         raise ValueError("input contains no observations")
+    if any(None in row or any(value is None for value in row.values()) for row in result):
+        raise ValueError("CSV row width does not match its header")
     return result
 
 

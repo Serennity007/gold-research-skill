@@ -1,0 +1,347 @@
+{
+  "gold": {
+    "skill": "gold-research-skill",
+    "product": "AU",
+    "base": 700,
+    "unit": "CNY/gram",
+    "title": {
+      "en": "Gold",
+      "zh-CN": "黄金"
+    },
+    "questions": {
+      "en": [
+        "Separate USD gold, CNY gold and FX conversion before attributing a domestic move. Match quote times, mass units, fineness and tax/delivery scope.",
+        "A real-yield or dollar move is an explanatory hypothesis, not a deterministic gold signal. Align publication clocks and state the observation window.",
+        "A gold/silver ratio requires synchronized currencies and mass units. Ratio extremes alone do not demonstrate mean reversion.",
+        "Distinguish physical premium, exchange inventory, ETF holdings and central-bank announcements; their frequencies, revisions and coverage differ.",
+        "Falsify a shortage explanation if physical premia and deliverable supply fail to confirm it; keep geopolitical narratives separate from observed flows."
+      ],
+      "zh-CN": [
+        "先区分美元金价、人民币金价与汇率折算，再归因国内变化。报价时点、质量单位、成色及税费交割口径必须一致。",
+        "实际利率与美元变化只是解释假设，不是确定的黄金信号；对齐公布时间并写清观察窗口。",
+        "金银比需要同步币种与质量单位；比值极端不能单独证明均值回归。",
+        "实物升水、交易所库存、ETF持仓与央行公告的频率、修订和覆盖不同，分别记录。",
+        "实物升水与可交割供应不确认时，应降低短缺解释的置信度；地缘叙事与实际流量分开。"
+      ]
+    },
+    "next_checks": {
+      "en": [
+        "Check official rate/FX releases and the same observation window.",
+        "Reconcile premium, warehouse and holdings evidence without double counting.",
+        "Recheck the effective contract and broker margin/fee notices before capacity arithmetic."
+      ],
+      "zh-CN": [
+        "核对官方利率／汇率发布与相同观察窗口。",
+        "交叉核对升水、仓储和持仓证据，避免重复计数。",
+        "容量计算前重新核对有效合约规则和经纪商保证金、费用通知。"
+      ]
+    },
+    "metrics": [
+      "real_yield_pct",
+      "physical_premium",
+      "inventory"
+    ]
+  },
+  "crude-oil": {
+    "skill": "crude-oil-research-skill",
+    "product": "SC",
+    "base": 550,
+    "unit": "CNY/barrel",
+    "allow_signed_prices": true,
+    "title": {
+      "en": "Crude oil",
+      "zh-CN": "原油"
+    },
+    "questions": {
+      "en": [
+        "Do not splice SC, Brent and WTI levels: grade, currency, location, freight, tax and delivery terms differ.",
+        "Read dated spreads together with inventories, refinery runs and product demand; backwardation alone does not prove a physical shortage.",
+        "Separate crude, products, strategic stocks, floating storage and transit volumes; weekly changes need comparable coverage and revisions.",
+        "Trace an outage through lost production, export loadings, transit and refinery substitution. Announced cuts and realized exports are different evidence.",
+        "Falsify a demand-led explanation if refinery throughput and product stocks deteriorate despite stronger flat prices. Signed prices disable ordinary return ratios."
+      ],
+      "zh-CN": [
+        "SC、Brent、WTI不能直接拼接价格：油种、币种、地点、运费、税费和交割条件不同。",
+        "月差须与库存、炼厂开工和成品需求一起研究；近强远弱不能单独证明实物短缺。",
+        "原油、成品油、战略库存、浮仓与在途分别统计；周变化须核对覆盖和修订。",
+        "从损失产量、装船、运输和炼厂替代逐段追踪停产；宣布减产与实际出口不是同一证据。",
+        "平价上涨但加工量和成品库存恶化时，应证伪需求拉动叙事；非正价格不使用普通收益率公式。"
+      ]
+    },
+    "next_checks": {
+      "en": [
+        "Confirm benchmark and delivery scope of every curve point.",
+        "Compare the first published inventory release with later revisions.",
+        "Update freight, outage realization and product cracks using explicit conversion recipes."
+      ],
+      "zh-CN": [
+        "核对每个曲线点的基准和交割口径。",
+        "比较库存首次公布与后续修订。",
+        "使用显式转换配方更新运费、实际停产和成品裂解口径。"
+      ]
+    },
+    "metrics": [
+      "commercial_crude_inventory",
+      "refinery_runs",
+      "product_inventory"
+    ]
+  },
+  "ec-shipping": {
+    "skill": "ec-shipping-research-skill",
+    "product": "EC",
+    "base": 1500,
+    "unit": "index_points",
+    "title": {
+      "en": "Europe container freight",
+      "zh-CN": "欧线集运 EC"
+    },
+    "questions": {
+      "en": [
+        "Identify the exact published settlement-index series, covered route and release time. A spot booking quotation is not a settlement-index observation.",
+        "Compare futures points with the matching index definition and settlement window. A point premium is descriptive, not a cash-and-carry opportunity.",
+        "A rerouting scenario changes voyage duration and effective capacity only under stated fleet, speed, idle-time and demand assumptions; do not equate delay with lost cargo.",
+        "Separate announced blank sailings, realized sailings, booking demand and realized load factors. Avoid adding overlapping capacity reductions.",
+        "Falsify a disruption-led premium if effective capacity recovers or bookings weaken while futures remain elevated. Verify the latest official settlement rules separately."
+      ],
+      "zh-CN": [
+        "核对具体结算指数、航线覆盖与发布时间；即期订舱报价不是结算指数观测。",
+        "期货点数须匹配指数定义与结算窗口；点数升水只是描述，不能解释为现货持有套利机会。",
+        "绕航只在船队、航速、停泊与需求假设下改变航程和有效运力；延误不等于货量消失。",
+        "宣布停航、实际开航、订舱需求和实际装载率分开；重叠运力削减不重复相加。",
+        "运力恢复或订舱转弱而期价仍高时，应检验并证伪扰动溢价叙事；另查最新官方结算规则。"
+      ]
+    },
+    "next_checks": {
+      "en": [
+        "Verify the index provider's publication calendar and observed release vintage.",
+        "Map contract expiry and the applicable settlement observation window from official notices.",
+        "Test rerouting and demand jointly; retain the original fleet denominator."
+      ],
+      "zh-CN": [
+        "核验指数机构的发布日历与实际公布版本。",
+        "根据官方通知核对合约到期及适用的结算观察窗口。",
+        "联合检验绕航和需求变化，保留原始船队分母。"
+      ]
+    },
+    "metrics": [
+      "settlement_index",
+      "effective_capacity",
+      "load_factor"
+    ]
+  },
+  "equity-index": {
+    "skill": "a-share-index-research-skill",
+    "product": "IF",
+    "base": 4000,
+    "unit": "index_points",
+    "title": {
+      "en": "A-share index futures",
+      "zh-CN": "A股股指期货"
+    },
+    "questions": {
+      "en": [
+        "Use an actual dated futures contract and its exact underlying index. A stock index level is not an executable futures quote.",
+        "Align spot/futures timestamps before basis. Financing, expected dividends and expiry matter; an annualized point discount is not a risk-free expected return.",
+        "Record breadth universe, constituent date, suspension treatment and coverage denominator. Survivorship-biased breadth can reverse an explanation.",
+        "Separate large/small-cap style and industry composition from broad market direction. Do not add total market turnover to overlapping subsets.",
+        "Falsify a broad recovery if index gains rely on a narrowing constituent set. Close-today costs and cash-settlement rules require dated official verification."
+      ],
+      "zh-CN": [
+        "使用实际到期期货合约及准确标的指数；股票指数点位不是可成交期货报价。",
+        "先同步现货与期货时点再算基差；融资、预期分红和到期日影响可比性，年化贴水不是无风险预期收益。",
+        "广度记录股票池、成分日期、停牌处理和覆盖分母；幸存者偏差可能推翻解释。",
+        "大小盘风格及行业权重与全市场方向分开；全市场成交额不与重叠子集相加。",
+        "指数上涨但参与成分持续收窄时，应证伪全面修复叙事；平今费用和现金交割须核对有效官方规则。"
+      ]
+    },
+    "next_checks": {
+      "en": [
+        "Check dividend assumptions, expiry and quote synchronization.",
+        "Rebuild breadth with the as-of constituent universe and coverage denominator.",
+        "Confirm open/close/close-today fee schedules with effective dates."
+      ],
+      "zh-CN": [
+        "核对分红假设、到期与报价同步。",
+        "按当时成分与覆盖分母重建市场广度。",
+        "确认开仓、平仓、平今费用及其生效日期。"
+      ]
+    },
+    "metrics": [
+      "advancing_fraction",
+      "index_turnover",
+      "dividend_estimate"
+    ]
+  },
+  "ferrous": {
+    "skill": "ferrous-futures-research",
+    "product": "RB",
+    "base": 3200,
+    "unit": "CNY/tonne",
+    "title": {
+      "en": "Ferrous supply chain",
+      "zh-CN": "黑色产业链"
+    },
+    "questions": {
+      "en": [
+        "Trace ore/coal/coke to hot metal, steel output and end-use demand. Blast-furnace and electric-arc routes require different costs and supply responses.",
+        "Reconcile mill and social inventories using non-overlapping coverage. Apparent consumption needs consistent production, imports, exports and stock changes.",
+        "A steel margin recipe must declare yields, ore/coke quality, wet/dry basis, tax, energy, transport and by-products. The example is not a universal furnace formula.",
+        "Match spot basis to location, grade, delivery eligibility and warehouse date; screen warehouse warrants separately from total inventory.",
+        "Falsify a demand recovery if shipments and comparable inventory drawdowns fail to confirm it; distinguish policy announcements from actual starts and purchases."
+      ],
+      "zh-CN": [
+        "从矿、煤、焦追踪到铁水、钢材与终端需求；高炉和电炉成本、供给响应应分别处理。",
+        "钢厂与社会库存先去重再核对；表观消费需要同口径产量、进出口和库存变化。",
+        "钢厂利润配方必须声明收得率、矿焦品质、干湿基、税费、能源、运输和副产品；示例不是通用高炉公式。",
+        "现货基差匹配地区、品级、交割资格和仓储日期；仓单与总库存单独核验。",
+        "发运与可比去库不确认时，应证伪需求修复；政策宣布与实际开工采购分开。"
+      ]
+    },
+    "next_checks": {
+      "en": [
+        "Reconcile hot metal, furnace utilization and actual construction/manufacturing orders.",
+        "Audit inventory survey coverage changes and recipe sensitivities.",
+        "Check grade premiums, delivery rules and remaining contract liquidity."
+      ],
+      "zh-CN": [
+        "交叉核对铁水、炉况与建筑制造实际订单。",
+        "审计库存调查覆盖变化并对配方做敏感性分析。",
+        "核对品级升贴水、交割规则与合约剩余流动性。"
+      ]
+    },
+    "metrics": [
+      "hot_metal_output",
+      "mill_inventory",
+      "social_inventory"
+    ]
+  },
+  "nonferrous": {
+    "skill": "nonferrous-futures-research",
+    "product": "CU",
+    "base": 78000,
+    "unit": "CNY/tonne",
+    "title": {
+      "en": "Nonferrous metals",
+      "zh-CN": "有色金属"
+    },
+    "questions": {
+      "en": [
+        "Separate mine supply, concentrate treatment charges, smelter output and fabricated demand; tight concentrate does not immediately equal tight refined metal.",
+        "Inventory comparisons require exchange/warehouse geography, bonded status and warrant eligibility. Cancelled warrants and warehouse stock are not independent additive supplies.",
+        "An import comparison needs synchronized FX, tax, freight, grade and location. A raw domestic/overseas price ratio is not an executable import margin.",
+        "Physical premium, near/far spread and inventory draw should confirm the same location and period before inferring shortage.",
+        "Falsify a demand-led rally if downstream utilization and premia weaken; distinguish supply maintenance from permanent capacity closures."
+      ],
+      "zh-CN": [
+        "矿端、精矿加工费、冶炼产量与加工需求分开；精矿紧张不等于精炼金属立即短缺。",
+        "库存比较要匹配交易所、仓库地区、保税状态和仓单资格；注销仓单与仓库库存不是独立可加供应。",
+        "进口比较需要同步汇率、税费、运费、品级和地区；内外比价不能直接解释为可执行进口利润。",
+        "实物升水、近远月差与去库须在相同地区和时期相互确认，再讨论短缺。",
+        "下游开工和升水转弱时，应检验需求拉动上涨；检修停产与永久关停分开。"
+      ]
+    },
+    "next_checks": {
+      "en": [
+        "Reconcile exchange stocks with warrants using documented inclusion rules.",
+        "Check smelter maintenance, concentrate availability and downstream orders.",
+        "Rebuild landed-cost assumptions before interpreting cross-market spreads."
+      ],
+      "zh-CN": [
+        "按明确包含关系核对交易所库存与仓单。",
+        "核对冶炼检修、精矿可得性与下游订单。",
+        "解释跨市场价差前重建到岸成本假设。"
+      ]
+    },
+    "metrics": [
+      "exchange_inventory",
+      "physical_premium",
+      "smelter_utilization"
+    ]
+  },
+  "chemicals": {
+    "skill": "chemicals-futures-research",
+    "product": "TA",
+    "base": 5000,
+    "unit": "CNY/tonne",
+    "title": {
+      "en": "Chemical processing chains",
+      "zh-CN": "化工加工链"
+    },
+    "questions": {
+      "en": [
+        "Choose one chain first: PX/PTA/polyester, naphtha/olefins or coal/methanol. Their feedstock, co-product and capacity economics are not interchangeable.",
+        "A processing spread needs explicit conversion yield, currency, tax, freight, energy and fixed-cost scope. Declared coefficients are assumptions, not a full cash-profit statement.",
+        "Separate nameplate capacity, effective utilization and realized output. An announced maintenance schedule needs observed start, duration and restart evidence.",
+        "Reconcile upstream stocks with downstream order coverage and product inventories; avoid aggregating nested inventories as independent demand.",
+        "Falsify a margin-led restart thesis if cash constraints, feedstock availability or downstream demand prevent production despite a wider calculated spread."
+      ],
+      "zh-CN": [
+        "先选定 PX—PTA—聚酯、石脑油—烯烃或煤—甲醇中的一条链；原料、副产品和产能经济性不能混用。",
+        "加工价差显式声明收率、币种、税费、运费、能源和固定成本；系数是假设，不等于完整现金利润表。",
+        "名义产能、有效开工与实际产量分开；宣布检修要核验实际开始、持续时间和重启。",
+        "上游库存与下游订单覆盖、产品库存交叉核对；嵌套库存不重复计作独立需求。",
+        "计算价差扩大但资金、原料或下游需求阻止开工时，应证伪利润驱动重启假设。"
+      ]
+    },
+    "next_checks": {
+      "en": [
+        "Validate feedstock/yield assumptions and test a range of energy/freight costs.",
+        "Compare announced outages with realized plant output.",
+        "Check product inventory days and downstream order duration using the same survey coverage."
+      ],
+      "zh-CN": [
+        "核验原料与收率假设，并测试能源运费区间。",
+        "对照宣布停产与实际装置产量。",
+        "用相同调查覆盖核对产品库存天数与下游订单长度。"
+      ]
+    },
+    "metrics": [
+      "plant_utilization",
+      "product_inventory",
+      "downstream_orders"
+    ]
+  },
+  "agriculture": {
+    "skill": "agri-futures-research",
+    "product": "M",
+    "base": 3000,
+    "unit": "CNY/tonne",
+    "title": {
+      "en": "Agricultural balances and crushing",
+      "zh-CN": "农产品供需与压榨"
+    },
+    "questions": {
+      "en": [
+        "Declare commodity, origin, quality and crop/marketing year before a supply-demand balance. Calendar-year totals and marketing-year totals cannot be silently combined.",
+        "A crush recipe must include meal/oil yields, moisture, input quality, FX, freight, tax and costs. Meal strength alone does not prove crush profitability.",
+        "Keep shipments, customs arrivals, port unloading, mill receipts and actual crushing separate; transit lead times can shift the apparent balance.",
+        "Match seasonal comparisons by crop phase or declared week key. Use only earlier years; weather anecdotes require acreage, timing and realized yield evidence.",
+        "Falsify a feed-demand recovery if offtake and comparable inventories diverge. Crop report revisions must enter only after their actual availability."
+      ],
+      "zh-CN": [
+        "供需平衡先声明品种、产地、质量和作物／市场年度；自然年与市场年度不能静默拼接。",
+        "压榨配方须包含粕油收率、水分、原料质量、汇率、运费、税费与成本；粕价强不等于压榨盈利。",
+        "装运、海关到港、港口卸货、油厂入库与实际压榨分开；在途时差会改变表观平衡。",
+        "季节比较匹配作物阶段或声明周键，只用往年；天气叙事须核验面积、时点和实际单产。",
+        "提货与可比库存背离时，应证伪饲料需求恢复；作物报告修订仅在实际可用后纳入。"
+      ]
+    },
+    "next_checks": {
+      "en": [
+        "Align marketing years, units and first-release/revision calendars.",
+        "Reconcile vessel arrivals, mill stocks, crushing and downstream offtake.",
+        "Stress both meal and oil yields/prices; retain origin and quality adjustments."
+      ],
+      "zh-CN": [
+        "对齐市场年度、单位及首次公布／修订日历。",
+        "核对船期到港、油厂库存、压榨与下游提货。",
+        "联合测试粕油收率与价格，保留产地品质调整。"
+      ]
+    },
+    "metrics": [
+      "mill_inventory",
+      "crushing_volume",
+      "downstream_offtake"
+    ]
+  }
+}

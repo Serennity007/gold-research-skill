@@ -4,7 +4,7 @@ description: 分析黄金的多周期价格结构、利率和美元背景、黄�
 license: MIT
 metadata:
   author: Serennity007
-  version: "1.1.0"
+  version: "2.0.0"
 ---
 
 # 黄金研究 Skill
@@ -47,3 +47,14 @@ python scripts/analyze_structure.py --csv examples/bars.csv --instrument GOLD_SY
 附带数据全部为构造样例。更换真实数据后使用 `--data-kind imported_observations` 并填写来源，不因为标签变化而宣称实测收益。未提供当前数据时可以给研究框架和明确缺口，不能编造即时行情。
 
 保留当时可知信息；未公布数据、未来 K 线不能进入历史结论。工具只做描述计算，不提供已验证的胜率、收益或自动执行。
+
+<!-- futures-desk-v3 -->
+## Versioned bilingual desk / 双语研究工作台
+
+For historical vintages, explicit daily sessions, comparable basis/spreads, seasonal evidence and fee/margin stress, read [the input contract](docs/desk-data-contract.md) and [the chain playbook](references/research-playbook.md).
+
+```bash
+python scripts/run_desk.py run --config examples/desk-demo/gold/config.json --out output --lang en
+```
+
+Both English and Chinese reports are generated. Read [the capacity model](docs/desk-risk-model.md) when sizing or stress is requested. Use `verify` and `replay` subcommands for the desk. The existing `run_research.py` command remains supported; new legacy bundles now hash every artifact and verify snapshots on reload. For old committed demonstrations, only the previously recorded input hashes can be verified with `scripts/legacy_bundle_integrity.py`; their original files remain unchanged.

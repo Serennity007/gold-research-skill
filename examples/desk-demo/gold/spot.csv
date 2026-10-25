@@ -1,0 +1,2 @@
+spot_id,price,currency,unit,scope,observed_at,published_at,available_at
+comparable_spot,724,CNY,CNY/gram,DEMO matching grade/location/tax/index definition; not a live quote,2025-09-26T15:00:00+08:00,2025-09-26T15:01:00+08:00,2025-09-26T15:02:00+08:00
