@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "skill": "gold-research-skill",
+  "data_kind": "synthetic",
+  "instrument": "GOLD_SYNTHETIC",
+  "timeframe": "H4",
+  "as_of": "2024-01-09T15:00:00+08:00",
+  "max_bar_age_hours": 24,
+  "files": {
+    "bars": "bars.csv",
+    "macro": "macro.csv"
+  },
+  "options": {
+    "support": 100,
+    "max_panel_age_days": 3
+  }
+}

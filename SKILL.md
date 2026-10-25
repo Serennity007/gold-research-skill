@@ -4,7 +4,7 @@ description: 分析黄金的多周期价格结构、利率和美元背景、黄�
 license: MIT
 metadata:
   author: Serennity007
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # 黄金研究 Skill
@@ -26,7 +26,17 @@ metadata:
 - 写研究报告和复盘时，读 [记录字段](references/report-template.md)。
 - 核查外部口径时，使用 [官方来源入口](references/sources.md)，记录实际访问日期。
 
-## 离线计算
+## 研究工作台
+
+完整研究时先读 [工作台与高级数据](references/workbench.md)。使用者给了数据就核对来源、口径和截止时间，运行本地报告；只有问题没有当前数据时，给缺口清单和情景框架。
+
+```bash
+python scripts/run_research.py --config examples/workbench.json --out output
+```
+
+报告同时输出 HTML、Markdown、JSON，冻结输入并提供可重跑配置。保留陈旧数据、证据冲突、样本缺失和未就绪指标；不把工具生成的报告视为人工核验结论。若讨论当日计划，区分观察条件、确认条件、失效条件和下次检查事件；复盘追加记录，不改写原计划。
+
+## 单项离线计算
 
 在仓库根目录运行；其他目录运行时将脚本、输入和输出替换成对应绝对路径。
 

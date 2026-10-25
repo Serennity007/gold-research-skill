@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "skill": "gold-research-skill",
+  "title": "黄金研究工作台",
+  "data_kind": "synthetic",
+  "as_of_utc": "2024-01-09T07:00:00+00:00",
+  "metrics": [
+    [
+      "已收盘 K 线",
+      "48",
+      "只使用截止时刻已收盘数据"
+    ],
+    [
+      "均线排列",
+      "descending",
+      "价格变换，不是独立胜率证明"
+    ],
+    [
+      "最新收盘",
+      "102",
+      "GOLD_SYNTHETIC"
+    ],
+    [
+      "黄金区间变化",
+      "+2.00%",
+      "共同完整日期窗口"
+    ],
+    [
+      "实际利率变化",
+      "+10.00 bp",
+      "百分数输入换算成基点"
+    ],
+    [
+      "金银比",
+      "85.000",
+      "相同美元/金衡盎司口径"
+    ]
+  ],
+  "attention": [
+    "SIMULATION / 全部为构造数据：展示计算与研究流程，不是历史预测或交易业绩。",
+    "黄金与美元、实际利率同涨：保留共同变化事实，不能用简单反向关系解释。"
+  ],
+  "evidence_gaps": [
+    "宏观对照没有证明因果；资金、需求和事件证据仍需补充。"
+  ],
+  "next_checks": [
+    "核对实际利率与美元数据的发布时间和历史版本。",
+    "检查关键位收复是否延续，失效则撤销修复假设。"
+  ],
+  "structure": {
+    "schema_version": 1,
+    "instrument": "GOLD_SYNTHETIC",
+    "declared_timeframe": "H4",
+    "data_kind": "synthetic",
+    "as_of_utc": "2024-01-09T07:00:00+00:00",
+    "source_sha256": "4bb5b1a88b744ea5b6f220892802af29a2d38d196379ecd1498bdeb172ba6c5e",
+    "completed_bar_count": 48,
+    "excluded_after_cutoff": 0,
+    "latest_completed_bar": {
+      "close_time": "2024-01-09T00:00:00+00:00",
+      "open": 98.0,
+      "high": 102.5,
+      "low": 97.5,
+      "close": 102.0
+    },
+    "observation_age_seconds": 25200.0,
+    "moving_averages": {
+      "ma5": 97.6,
+      "ma10": 98.8,
+      "ma20": 102.23799999999999
+    },
+    "ma_ordering": "descending",
+    "macd": {
+      "ready": true,
+      "dif": -2.4893168090675317,
+      "dea": -2.3260266125064257,
+      "histogram": -0.326580393122212,
+      "histogram_previous": -1.2421249018730176,
+      "sign": "negative",
+      "absolute_magnitude": "shrinking",
+      "flip": null,
+      "definition": "EMA12-EMA26; EMA9 signal; histogram=2*(DIF-DEA); first-close EMA seed"
+    },
+    "boundary_observations": {
+      "support": {
+        "level": 100.0,
+        "observation": "reclaimed_after_closed_break"
+      }
+    },
+    "reference_window": null,
+    "scope": "Descriptive facts only; no live quotes, price target, trade instruction or win-rate estimate.",
+    "limitations": [
+      "Input close_time is assumed to mean bar close, not bar open; provider convention must be checked",
+      "No session-calendar, missing-bar, contract-roll, unit or quote-source verification",
+      "Manual support/resistance and analog anchors are not validated predictive features",
+      "A reclaim/rejection observation does not establish a confirmed reversal or successful retest"
+    ]
+  },
+  "domain": null,
+  "advanced": {
+    "schema_version": 1,
+    "data_kind": "synthetic",
+    "as_of_utc": "2024-01-09T07:00:00+00:00",
+    "start_date": "2024-01-08",
+    "end_date": "2024-01-09",
+    "complete_dates": 2,
+    "incomplete_dates": 0,
+    "excluded_unavailable_rows": 0,
+    "observations": {
+      "2024-01-08": {
+        "XAUUSD": {
+          "value": 2000.0,
+          "available_at": "2024-01-08T01:00:00+00:00"
+        },
+        "XAGUSD": {
+          "value": 25.0,
+          "available_at": "2024-01-08T01:00:00+00:00"
+        },
+        "DXY": {
+          "value": 100.0,
+          "available_at": "2024-01-08T01:00:00+00:00"
+        },
+        "US10Y_REAL": {
+          "value": 2.0,
+          "available_at": "2024-01-08T01:00:00+00:00"
+        }
+      },
+      "2024-01-09": {
+        "XAUUSD": {
+          "value": 2040.0,
+          "available_at": "2024-01-09T01:00:00+00:00"
+        },
+        "XAGUSD": {
+          "value": 24.0,
+          "available_at": "2024-01-09T01:00:00+00:00"
+        },
+        "DXY": {
+          "value": 101.0,
+          "available_at": "2024-01-09T01:00:00+00:00"
+        },
+        "US10Y_REAL": {
+          "value": 2.1,
+          "available_at": "2024-01-09T01:00:00+00:00"
+        }
+      }
+    },
+    "returns": {
+      "XAUUSD": 0.020000000000000018,
+      "XAGUSD": -0.040000000000000036,
+      "DXY": 0.010000000000000009
+    },
+    "real_yield_change_bp": 10.000000000000009,
+    "gold_silver_ratio_start": 80.0,
+    "gold_silver_ratio_end": 85.0,
+    "co_movement": {
+      "gold_up": true,
+      "dollar_up": true,
+      "real_yield_up": true,
+      "gold_up_with_dollar_and_yield_up": true
+    },
+    "end_date_age_days": 0,
+    "source_sha256": "d497c2ac106429765b07a76cce05d32f8379e4f7f74e36fd7374bbee61e57186",
+    "scope": "Same-date descriptive comparison; no causal attribution, predictive score or forward fill.",
+    "limitations": [
+      "Imported available_at and observation vintages are not independently authenticated",
+      "DXY is not a substitute for a different broad dollar index; real yield is not nominal yield",
+      "Only common dates are compared; an endpoint return is not a correlation estimate"
+    ]
+  },
+  "scope": "Offline descriptive research; imported source claims are not authenticated; no execution or profit estimate.",
+  "inputs": {
+    "bars": {
+      "source": {
+        "name": "Constructed synthetic example",
+        "url": "synthetic://local-example"
+      },
+      "file_name": "bars.csv",
+      "sha256": "4bb5b1a88b744ea5b6f220892802af29a2d38d196379ecd1498bdeb172ba6c5e",
+      "bytes": 2472
+    },
+    "macro": {
+      "source": {
+        "name": "Constructed synthetic example",
+        "url": "synthetic://local-example"
+      },
+      "file_name": "macro.csv",
+      "sha256": "d497c2ac106429765b07a76cce05d32f8379e4f7f74e36fd7374bbee61e57186",
+      "bytes": 510
+    }
+  },
+  "config_sha256": "9f0f521d8b41eb0fedb2b2370b41846dde1124bd9b7f8194d158c99aaac8e1f7",
+  "generated_at_utc": "2026-10-25T08:15:02.192132+00:00"
+}
