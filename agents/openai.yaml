@@ -1,0 +1,4 @@
+interface:
+  display_name: "黄金研究 Skill"
+  short_description: "黄金多周期结构、利率美元线索与可追溯研究复盘，支持离线数据校验"
+  default_prompt: "使用 $gold-research-skill，根据我提供的标的、数据与截止时间完成研究，明确事实、情景、失效条件和复盘检查点。"
