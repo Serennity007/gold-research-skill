@@ -1,2 +1,3 @@
 /desk_core/* text eol=lf
 /CORE-MANIFEST.json text eol=lf
+/examples/workbench/inputs/** -text -diff
